@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p>7 Days are:</p>
+    <br>
+    <p id="days"></p>
+    <br>
+    <p id="day"></p>
+    <script>
+        var d=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        var text=""
+        var i;
+        for (i=0;i<d.length;i++)
+         {
+            text+=d[i]+"<br>"
+        }
+        document.getElementById("days").innerHTML=text
+
+        var w;
+        switch(new Date().getDay())
+        {
+        case 0:
+        w="Sunday";
+        break
+
+        case 1:
+        w="Monday";
+        break
+
+        case 2:
+        w="Tuesday";
+        break
+
+        case 3:
+        w="Wednesday";
+        break
+
+        case 4:
+        w="Thursday";
+        break
+
+        case 5:
+        w="Friday";
+        break
+
+        case 6:
+        w="Saturday";
+        break
+    }
+    document.getElementById("day").innerHTML="Today is: "+w
+    </script>
+</body>
+</html>
